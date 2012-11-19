@@ -2,4 +2,9 @@
 
 require 'rush'
 
-Rush::Shell::start
+@interpreter = Rush::Interpreter.new(Rush::Shell.new)
+
+loop {
+  print Rush::get_prompt
+  @interpreter.interpret gets 
+}
