@@ -1,4 +1,6 @@
 rush
 ====
 
-Rush: A RUby SHell
+A RUby SHell
+
+Inspired by windows PowerShell.
