@@ -1,6 +1,4 @@
-require 'socket'
-
-module Rush
+module Rubyish
   class Shell
     def eval_command command
       eval command

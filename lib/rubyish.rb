@@ -1,7 +1,7 @@
-require 'rush/shell'
-require 'rush/interpreter'
+require 'rubyish/interpreter'
+require 'socket'
 
-module Rush
+module Rubyish
   extend self
 
   def start

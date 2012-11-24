@@ -1,9 +1,10 @@
 require 'irb/ruby-lex'
-require 'rush/input_method'
+require 'rubyish/input_method'
+require 'rubyish/shell'
 
-module Rush
+module Rubyish
   class Interpreter
-    def initialize shell = Rush::Shell.new
+    def initialize shell = Rubyish::Shell.new
       @shell = shell
       @input = InputMethod.new
     end
@@ -11,7 +12,7 @@ module Rush
     def read_input command = nil
       lexer = RubyLex.new
       lexer.set_prompt do |ltype, indent, continue, line_no|
-        @input.prompt = Rush::get_prompt
+        @input.prompt = Rubyish::get_prompt
       end
       lexer.set_input @input
 
